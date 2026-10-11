@@ -44,7 +44,7 @@ export default function HomePage() {
           </div>
           <div className="mt-4 flex items-center gap-2 text-[11px] font-medium text-white/85">
             <Zap className="h-3.5 w-3.5" />
-            Immobiler · Véhicules · Électronique
+            Immobilier · Véhicules · Électronique
           </div>
         </div>
       </section>
