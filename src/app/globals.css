@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f7f4f1;
+  --bg: #f6f2ef;
   --surface: #ffffff;
-  --surface-2: #f0ebe6;
-  --line: #e5ddd4;
+  --surface-2: #efe9e4;
+  --line: #e6ddd5;
   --text: #1a1210;
   --muted: #6f625a;
   --brand: #e11d48;
@@ -20,6 +20,7 @@
   --info: #1d4ed8;
   --info-soft: #dbeafe;
   --shadow: 26 18 16;
+  --radius: 0.9rem;
   color-scheme: light;
 }
 
@@ -59,6 +60,8 @@ body {
   color: var(--text);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
 }
 
 * {
@@ -89,4 +92,56 @@ select {
 .safe-px {
   padding-left: max(1rem, env(safe-area-inset-left));
   padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+.pt-safe { padding-top: env(safe-area-inset-top); }
+.pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+.h-tabbar { height: calc(64px + env(safe-area-inset-bottom)); }
+.pb-tabbar { padding-bottom: calc(88px + env(safe-area-inset-bottom)); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  box-shadow:
+    0 1px 2px rgb(var(--shadow) / 0.04),
+    0 8px 24px -12px rgb(var(--shadow) / 0.12);
+}
+
+.glass {
+  background: color-mix(in srgb, var(--surface) 78%, transparent);
+  backdrop-filter: blur(18px) saturate(1.45);
+  -webkit-backdrop-filter: blur(18px) saturate(1.45);
+  border: 1px solid color-mix(in srgb, var(--line) 75%, transparent);
+}
+
+.shadow-soft {
+  box-shadow:
+    0 1px 2px rgb(var(--shadow) / 0.05),
+    0 12px 32px -16px rgb(var(--shadow) / 0.22);
+}
+
+.shadow-pop {
+  box-shadow: 0 20px 50px -20px rgb(var(--shadow) / 0.45);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@keyframes tala-shimmer {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(220%); }
+}
+
+.tala-shimmer-bar {
+  animation: tala-shimmer 1.25s ease-in-out infinite;
+}
+
+@keyframes tala-fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: tala-fade-up 0.45s ease-out both;
 }

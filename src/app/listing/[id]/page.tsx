@@ -45,17 +45,23 @@ export default async function ListingPage({
     <main className="pb-28">
       <div className="relative">
         <div
-          className="flex h-56 items-center justify-center text-7xl"
+          className="relative h-64 overflow-hidden bg-surface-2"
           style={{
             background: `linear-gradient(145deg, hsl(${listing.imageHue} 55% 92%), hsl(${listing.imageHue} 45% 72%))`,
           }}
         >
-          <span aria-hidden>{listing.imageEmoji}</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={listing.imageUrl}
+            alt={listing.title}
+            className="h-full w-full object-cover"
+          />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent" />
         </div>
         <div className="absolute left-3 top-3 flex gap-2">
           <Link
             href="/"
-            className="rounded-full bg-white/90 p-2.5 shadow backdrop-blur"
+            className="rounded-full bg-white/90 p-2.5 shadow-soft backdrop-blur"
             aria-label="Retour"
           >
             <ArrowLeft className="h-5 w-5" />
@@ -151,7 +157,7 @@ export default async function ListingPage({
         </section>
 
         {seller && (
-          <section className="mt-6 rounded-2xl border border-line bg-surface p-4">
+          <section className="mt-6 card p-4">
             <div className="flex items-center gap-3">
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-lg font-bold text-brand">
                 {seller.name.slice(0, 1)}
@@ -180,7 +186,7 @@ export default async function ListingPage({
           {isProperty && <AppointmentStub listingId={listing.id} />}
           <Link
             href="/chats/c1"
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand px-4 py-3 text-sm font-semibold text-white transition active:scale-[0.99]"
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-brand to-brand-strong px-4 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand/25 transition active:scale-[0.99]"
           >
             <MessageCircle className="h-4 w-4" />
             Contacter le vendeur

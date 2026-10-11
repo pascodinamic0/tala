@@ -7,6 +7,7 @@ import type { Listing } from '@/lib/types';
 import { formatPrice } from '@/lib/money';
 import { getDb, toggleFavorite } from '@/lib/db';
 import { BoostBadge, FeaturedBadge } from './VerifiedBadge';
+import { ListingImage } from './ListingImage';
 import { cn } from '@/lib/cn';
 
 export function ListingCard({
@@ -27,18 +28,20 @@ export function ListingCard({
   return (
     <article
       className={cn(
-        'group relative overflow-hidden rounded-2xl bg-surface border border-line shadow-sm transition hover:shadow-md',
+        'group relative overflow-hidden rounded-2xl border border-line bg-surface shadow-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-pop',
         compact ? '' : '',
       )}
     >
       <Link href={`/listing/${listing.id}`} className="block">
-        <div
-          className="relative flex h-36 items-center justify-center text-5xl"
-          style={{
-            background: `linear-gradient(145deg, hsl(${listing.imageHue} 55% 92%), hsl(${listing.imageHue} 45% 78%))`,
-          }}
-        >
-          <span aria-hidden>{listing.imageEmoji}</span>
+        <div className="relative">
+          <ListingImage
+            src={listing.imageUrl}
+            hue={listing.imageHue}
+            emoji={listing.imageEmoji}
+            alt={listing.title}
+            className="h-40 w-full"
+          />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/35 to-transparent" />
           <div className="absolute left-2 top-2 flex flex-wrap gap-1">
             {listing.featured && <FeaturedBadge />}
             {isBoosted && <BoostBadge />}
@@ -48,7 +51,7 @@ export function ListingCard({
           <p className="text-base font-bold text-brand tabular-nums">
             {formatPrice(listing.price, listing.currency, listing.pricePeriod)}
           </p>
-          <h3 className="mt-0.5 line-clamp-2 text-sm font-semibold text-ink leading-snug">
+          <h3 className="mt-0.5 line-clamp-2 text-sm font-semibold leading-snug text-ink">
             {listing.title}
           </h3>
           <p className="mt-1.5 flex items-center gap-1 text-xs text-muted">

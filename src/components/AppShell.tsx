@@ -14,7 +14,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Splash />
-      <div className={hideNav ? '' : 'pb-24'}>{children}</div>
+      <div className={hideNav ? '' : 'pb-tabbar'}>{children}</div>
       {!hideNav && <BottomNav />}
     </>
   );

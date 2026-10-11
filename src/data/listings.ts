@@ -3,6 +3,7 @@ import type { Listing } from '@/lib/types';
 export const LISTINGS: Listing[] = [
   {
     id: 'l1',
+    imageUrl: '/listings/l1.jpg',
     title: 'Appartement 3 chambres meublé — Gombe',
     description:
       'Bel appartement au 4e étage, salon lumineux, cuisine équipée, climatisation, gardiennage 24h. Proche boulevard du 30 Juin. Idéal expat ou famille.',
@@ -26,6 +27,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l2',
+    imageUrl: '/listings/l2.jpg',
     title: 'Villa 5 chambres avec piscine — Ngaliema',
     description:
       'Villa standing sur parcelle 600 m², piscine, dépendance, parking 3 voitures. Quartier calme Ma Campagne. Visite sur rendez-vous.',
@@ -48,6 +50,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l3',
+    imageUrl: '/listings/l3.jpg',
     title: 'Terrain 400 m² titre foncier — Limete',
     description:
       'Terrain clôturé, titre foncier en règle, accès bitumé. Zone industrielle / résidentielle. Notaire recommandé pour la transaction.',
@@ -67,6 +70,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l4',
+    imageUrl: '/listings/l4.jpg',
     title: 'Studio moderne — Kintambo',
     description:
       'Studio rénové, cuisine américaine, wifi fibre. Loyer hors charges. Caution 2 mois.',
@@ -88,6 +92,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l5',
+    imageUrl: '/listings/l5.jpg',
     title: 'Toyota RAV4 2021 — 48 000 km',
     description:
       'RAV4 hybride, un seul propriétaire, entretien à jour, pneus neufs. Carte grise et contrôle technique OK. Essai à Kalamu.',
@@ -113,6 +118,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l6',
+    imageUrl: '/listings/l6.jpg',
     title: 'Mercedes C200 2018 — Automatique',
     description:
       'Berline allemande, intérieur cuir, toit ouvrant. Kilométrage certifié. Négociable pour paiement cash.',
@@ -137,6 +143,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l7',
+    imageUrl: '/listings/l7.jpg',
     title: 'Moto TVS Apache 160 — 2023',
     description:
       'Moto quasi neuve, idéale pour Kinshasa. Papers complets. Livraison possible Masina / Ndjili.',
@@ -161,6 +168,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l8',
+    imageUrl: '/listings/l8.jpg',
     title: 'iPhone 15 Pro 256 Go — scellé',
     description:
       'Boîte scellée, garantie Apple. Facture disponible. Échange non accepté. Remise main propre Gombe.',
@@ -181,6 +189,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l9',
+    imageUrl: '/listings/l9.jpg',
     title: 'MacBook Air M2 16/512 — excellent état',
     description:
       'Acheté en 2024, batterie 96 %, chargeur d’origine. Parfait pour bureautique et création.',
@@ -201,6 +210,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l10',
+    imageUrl: '/listings/l10.jpg',
     title: 'Bureau open-space 120 m² — Gombe',
     description:
       'Espace professionnel climatisé, fibre, parking visiteurs. Bail 12 mois minimum.',
@@ -220,6 +230,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l11',
+    imageUrl: '/listings/l11.jpg',
     title: 'Générateur Perkins 30 kVA',
     description:
       'Générateur industriel entretenu, idéal immeuble ou atelier. Livraison Kinshasa possible.',
@@ -238,6 +249,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l12',
+    imageUrl: '/listings/l12.jpg',
     title: 'Canapé cuir 3 places + fauteuils',
     description:
       'Salon complet cuir véritable, très peu servi. À récupérer Bandalungwa.',
@@ -256,6 +268,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l13',
+    imageUrl: '/listings/l13.jpg',
     title: 'Maison 4 chambres — Lemba',
     description:
       'Maison familiale, cour, puits, dépendance. Bon état général. Prix en FC négociable.',
@@ -276,6 +289,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l14',
+    imageUrl: '/listings/l14.jpg',
     title: 'Appartement 2 chambres — Mont Ngafula',
     description:
       'Vue dégagée, calme, parking. Loyer en dollars. Charges séparées (eau, électricité).',
@@ -297,6 +311,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l15',
+    imageUrl: '/listings/l15.jpg',
     title: 'Toyota Hilux 2019 double cabine',
     description:
       'Pick-up robuste, clim, 4×4. Idéal chantier ou province. Entretien Toyota Kinshasa.',
@@ -322,6 +337,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     id: 'l16',
+    imageUrl: '/listings/l16.jpg',
     title: 'Samsung Galaxy S24 Ultra 512 Go',
     description:
       'Comme neuf, facture et boîte. Stylet inclus. Pas d’échange.',

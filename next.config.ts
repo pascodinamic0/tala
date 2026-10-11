@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: '/(icons|splash)/:path*',
+        source: '/(icons|splash|listings)/:path*',
         headers: [
           {
             key: 'Cache-Control',

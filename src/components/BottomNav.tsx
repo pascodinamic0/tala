@@ -18,7 +18,7 @@ export function BottomNav() {
 
   return (
     <nav
-      className="fixed bottom-0 inset-x-0 z-40 border-t border-line bg-surface/95 backdrop-blur-md pb-[env(safe-area-inset-bottom)]"
+      className="glass fixed inset-x-0 bottom-0 z-40 border-t border-line/70 pb-safe shadow-[0_-8px_30px_-18px_rgb(var(--shadow)/0.35)]"
       aria-label="Navigation principale"
     >
       <ul className="mx-auto flex max-w-lg items-end justify-around px-1 pt-1">
@@ -35,7 +35,7 @@ export function BottomNav() {
                   href={item.href}
                   className="flex flex-col items-center gap-0.5"
                 >
-                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-brand text-white shadow-lg shadow-brand/30 ring-4 ring-bg transition active:scale-95">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-brand to-brand-strong text-white shadow-lg shadow-brand/35 ring-4 ring-bg transition active:scale-95">
                     <Plus className="h-7 w-7" strokeWidth={2.5} />
                   </span>
                   <span className="text-[10px] font-semibold text-brand">

@@ -46,6 +46,8 @@ export interface Listing {
   boostedUntil?: string | null;
   sellerId: string;
   createdAt: string;
+  /** Local path under /listings/ or remote URL */
+  imageUrl: string;
   imageHue: number;
   imageEmoji: string;
   tags?: string[];

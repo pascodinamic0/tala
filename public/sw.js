@@ -1,5 +1,5 @@
 /* Tala service worker — generated at build */
-const VERSION = 'dev-mv3nqhpb';
+const VERSION = '302c709-mv4efpsi';
 const PRECACHE = '["/","/manifest.webmanifest","/icon.svg","/apple-touch-icon.png","/icons/favicon-32.png","/icons/icon-192.png","/icons/icon-512.png","/icons/mark.svg","/icons/maskable-192.png","/icons/maskable-512.png","/splash/splash-1080x2340.png","/splash/splash-1170x2532.png","/splash/splash-1179x2556.png","/splash/splash-1290x2796.png","/splash/splash-750x1334.png"]';
 const CACHE = `tala-${VERSION}`;
 
